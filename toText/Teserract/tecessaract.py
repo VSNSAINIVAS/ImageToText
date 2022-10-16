@@ -11,7 +11,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 def teserract(url):
-    pytesseract.tesseract_cmd = '/app/.apt/ur/bin/tesseract'
+    pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 
     #Extract text from image
