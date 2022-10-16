@@ -12,7 +12,7 @@ nltk.download('stopwords')
 
 def teserract(url):
     #Define path to tessaract.exe
-    path_to_tesseract = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    path_to_tesseract = r"tesseract.exe"
 
     #Define path to image   
     response = requests.get(url)
