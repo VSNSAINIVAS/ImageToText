@@ -13,7 +13,6 @@ nltk.download('stopwords')
 def teserract(url):
     pytesseract.tesseract_cmd = '/app/.apt/ur/bin/tesseract'
 
-    #Open image with PIL
 
     #Extract text from image
     response = requests.get(url)
