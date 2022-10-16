@@ -11,21 +11,13 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 def teserract(url):
-    #Define path to tessaract.exe
-    path_to_tesseract = r"tesseract.exe"
-
-    #Define path to image   
-    response = requests.get(url)
-    image = Image.open(BytesIO(response.content))
-    # image = Image.open(url)
-
-
-    #Point tessaract_cmd to tessaract.exe
-    pytesseract.tesseract_cmd = path_to_tesseract
+    pytesseract.tesseract_cmd = '/app/.apt/ur/bin/tesseract'
 
     #Open image with PIL
 
     #Extract text from image
+    response = requests.get(url)
+    image = Image.open(BytesIO(response.content))
     text = pytesseract.image_to_string(image)
 
     text = text.replace('\n',' ')
